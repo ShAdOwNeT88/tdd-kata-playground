@@ -3,22 +3,24 @@ package stringCalculator
 class StringCalculator {
 
     fun add(numbers: String): Int {
-        return if (numbers == "")
-            0
-        else {
-            var sum = 0
+        var sum = 0
+
+        if (numbers.isNotEmpty()) {
             val obtainedNumbers = split(numbers)
             obtainedNumbers.forEach { number ->
                 sum += number
             }
-            return sum
         }
+        return sum
     }
 
     fun split(numbers: String): List<Int> {
         val convertedNumbers = ArrayList<Int>()
-        numbers.split(",").listIterator().forEach { number -> convertedNumbers.add(Integer.parseInt(number)) }
 
+        numbers.split(",").listIterator().forEach { number ->
+            convertedNumbers.add(Integer.parseInt(number))
+        }
+s
         return convertedNumbers
     }
 }
