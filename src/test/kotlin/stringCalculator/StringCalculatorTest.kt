@@ -44,4 +44,20 @@ class StringCalculatorTest {
 
         assertTrue(actual == expected)
     }
+
+    @Test
+    fun `test sum with 10 numbers`(){
+        val actual = sc.add("1,2,3,4,5,6,7,8,9,10")
+        println("Operation Result: $actual")
+        val expected = 55
+        assertTrue(actual == expected)
+    }
+
+    @Test
+    fun `test sum with 20 numbers`(){
+        val actual = sc.add("1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20")
+        println("Operation Result: $actual")
+        val expected = 210
+        assertTrue(actual == expected)
+    }
 }
