@@ -20,7 +20,7 @@ class StringCalculator {
         numbers.split(",").listIterator().forEach { number ->
             convertedNumbers.add(Integer.parseInt(number))
         }
-s
+        
         return convertedNumbers
     }
 }
